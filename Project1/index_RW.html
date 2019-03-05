@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visualisation with Google API - ROBIN WANG</title>
+    <link rel="stylesheet" type="text/css" href="style_css/style_P1.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+    <!-- Script to read in Google spreadsheet data -->
+    <script type="text/javascript"
+        src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      //loading google chart
+      google.charts.load('current',{'packages':['corechart']});
+      //load the Callback function that runs when page loads
+      google.charts.setOnLoadCallback(listOfFigures);
+
+      function listOfFigures() {
+        collectGoogleInfo('militaryspending',
+                'SELECT A,B',
+                instructionsEduTest);
+      }
+
+      function collectGoogleInfo(sheetName, pingGoogle, drawInstructions) {
+        var encodedPing = encodeURIComponent(pingGoogle);
+        var pingGoogle = new google.visualization.Query(
+          //Collect from Google Spreadsheet, modify link ending
+          'https://docs.google.com/spreadsheets/d/1Fg-cM-ds0JxpdtboHKv0OENG_ZxTKcY-9HbnZzKhmco/gviz/tq?sheet=' + sheetName + '&headers=1&tq=' + encodedPing);
+        pingGoogle.send(drawInstructions);
+      }
+
+      function instructionsEduTest(response) {
+        var data = response.getDataTable();
+        var options = {
+          height:400,
+          vAxis:{title: 'Spending'},
+          hAxis:{title: 'Country'}
+        }
+
+        var chart = new google.visualization.ColumnChart(
+          document.getElementById('test_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+  </head>
+
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .bar-block_navigateur .bar-item {padding:25px}
+  </style>
+
+  <body>
+
+  <!-- Hidden Navigateur Sidebar (Adapted from W3) -->
+    <nav class="sidebar_navigateur bar-block_navigateur card_navigateur pagetop style-xlarge movement-l block-fading"
+         style="display:none;z-index:2;width:35%;min-width:250px"
+         id="Sidebar_Navigateur">
+      <a href="javascript:void(0)" onclick="close_onclick()" class="bar-item style-button">Close Menu</a>
+
+      <a href="#Visualisation Project 1" onclick="close_onclick()" class="bar-item style-button">Visualising Expenditures</a>
+      <a href="#Real Spending" onclick="close_onclick()" class="bar-item style-button">Measuring Absolute Spending</a>
+      <a href="#Share GDP" onclick="close_onclick()" class="bar-item style-button">Relative to GDP</a>
+      <a href="#Per Capita" onclick="close_onclick()" class="bar-item style-button">Per Capita Spending</a>
+      <a href="#Allocation" onclick="close_onclick()" class="bar-item style-button">Resource Allocation</a>
+      <a href="#Spotlight" onclick="close_onclick()" class="bar-item style-button">Spotlight</a>
+      <a href="#Interpretation" onclick="close_onclick()" class="bar-item style-button">Interpretation</a>
+      <a href="#About the Project" onclick="close_onclick()" class="bar-item style-button">About the Project</a>
+    </nav>
+
+  <!-- Page Top -->
+    <div class="pagetop">
+      <div class="style-white style-xlarge" style="max-width:1200px;margin:auto">
+        <div class="style-button style-padding leftfloat" onclick="open_onclick()">
+          Content</br>Navigateur
+        </div>
+        <div class="rightfloat style-padding style-rightmargin">
+          Robin Wang<br>March 2019
+        </div>
+        <div class="align-center style-padding font-title">
+          Data Visualisation Project 1<br>
+          G20 Spending Using Google Visualisation API
+        </div>
+      </div>
+    </div>
+
+  <!-- PAGE CONTENT -->
+    <div class="style-margin style-content style-padding-relative" style="max-width:1200px;margin-top:100px">
+
+      <hr>
+
+      <!-- 1. Visualisation Project 1-->
+      <div class="spacing-between-row style-padding align-center swipe-space" id="Visualisation Project 1">
+        <div class="style-padding align-center">
+          <h2>MILITARY ANALYSIS OF TOP 10 G20 COUNTRIES</h2>
+        </div>
+
+        <div class="swipe-element fade">
+          <div id="test_div" style="width:90%" align="middle"></div>
+          <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+          <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="swipe-element fade">
+          <img src="images/test2.png" alt="Steak" style="width:90%" align="middle">
+          <h3>Let Me Tell You About This Steak</h3>
+          <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="swipe-element fade">
+          <img src="images/test3.png" alt="Cherries" style="width:90%" align="middle">
+          <h3>Cherries, interrupted</h3>
+          <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          <p>What else?</p>
+        </div>
+        <a class="prev leftfloat hover-black" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next rightfloat hover-black" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div style="text-align:center">
+        <span class="dot style-w3badge style-addborder" onclick="currentSlide(1)"></span>
+        <span class="dot style-w3badge style-addborder" onclick="currentSlide(2)"></span>
+        <span class="dot style-w3badge style-addborder" onclick="currentSlide(3)"></span>
+      </div>
+
+      <br>
+      <hr>
+
+      <!-- Second Photo Grid-->
+      <div class="spacing-between-row style-padding align-center">
+        <div class="section">
+          <img src="/images/popsicle.jpg" alt="Popsicle" style="width:100%">
+          <h3>All I Need Is a Popsicle</h3>
+          <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="section">
+          <img src="/images/salmon.jpg" alt="Salmon" style="width:100%">
+          <h3>Salmon For Your Skin</h3>
+          <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="section">
+          <img src="/images/sandwich.jpg" alt="Sandwich" style="width:100%">
+          <h3>The Perfect Sandwich, A Real Classic</h3>
+          <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+      </div>
+
+      <hr id="About the Project">
+
+      <!-- About Section -->
+      <div class="section_container style-padding-large align-center">
+        <h3>About the Project - Credit and Source</h3><br>
+        <img src="/images/chef.jpg" alt="Me" class="image_format" style="display:block;margin:auto" width="800" height="533">
+        <div class="style-padding-large">
+          <h4><b>I am Who I Am!</b></h4>
+          <h6><i>With Passion For Real, Good Food</i></h6>
+          <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Footer -->
+      <footer class="spacing-between-row style-padding-large">
+        <div class="onethird">
+          <h3>FOOTER</h3>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+
+        <div class="onethird">
+          <h3>BLOG POSTS</h3>
+          <ul class="style-ul style-hoverover">
+            <li class="style-padding">
+              <img src="/images/workshop.jpg" class="leftfloat style-rightmargin" style="width:50px">
+              <span class="font-large">Lorem</span><br>
+              <span>Sed mattis nunc</span>
+            </li>
+            <li class="style-padding">
+              <img src="/images/gondol.jpg" class="leftfloat style-rightmargin" style="width:50px">
+              <span class="font-large">Ipsum</span><br>
+              <span>Praes tinci sed</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="onethird font-serif">
+          <h3>POPULAR TAGS</h3>
+          <p>
+            <span class="style-tags style-margin-bottom">Travel</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">New York</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Dinner</span>
+            <span class="style-tags style-dark-grey font-small style-margin-bottom">Salmon</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">France</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Drinks</span>
+            <span class="style-tags style-dark-grey font-small style-margin-bottom">Ideas</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Flavors</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Cuisine</span>
+            <span class="style-tags style-dark-grey font-small style-margin-bottom">Chicken</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Dressing</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Fried</span>
+            <span class="style-tags style-dark-grey font-small style-margin-bottom">Fish</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Duck</span>
+          </p>
+        </div>
+      </footer>
+
+    <!-- End page content -->
+    </div>
+
+    <script type="text/javascript">
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("swipe-element");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += "active";
+      }
+    </script>
+
+    <script>
+    // Script to open and close sidebar
+    function open_onclick() {
+      document.getElementById("Sidebar_Navigateur").style.display = "block";
+    }
+
+    function close_onclick() {
+      document.getElementById("Sidebar_Navigateur").style.display = "none";
+    }
+    </script>
+
+  </body>
+
+</html>
