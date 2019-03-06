@@ -49,24 +49,16 @@ div {
 .image_format{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
 .font-title{font-size:24px;font-weight:bold;text-transform:uppercase;}
 
-.w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
 .style-hoverover tbody tr:hover,.style-ul.style-hoverover li:hover{background-color:#ccc}
-.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
-.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
-.w3-btn,.style-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
-.w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
-.w3-btn,.style-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.w3-disabled,.w3-btn:disabled,.style-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
-.w3-btn.w3-disabled:hover,.w3-btn:disabled:hover{box-shadow:none}
-
+.style-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.style-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.style-button:disabled{cursor:not-allowed;opacity:0.3}
+.colour-button {background-color: #e7e7e7; color: black;}
 
 .style-w3badge,.style-tags{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}
 .style-w3badge{border-radius:50%}
 .style-ul{list-style-type:none;padding:0;margin:0}.style-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.style-ul li:last-child{border-bottom:none}
 
-.w3-tooltip,.w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
-.w3-ripple:active{opacity:0.5}.w3-ripple{transition:opacity 0s}
-.w3-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
 .w3-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
 .w3-dropdown-click,.w3-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
 .w3-dropdown-hover:hover .w3-dropdown-content{display:block}
@@ -91,41 +83,24 @@ div {
 .w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.bar_section:before,.bar_section:after{content:"";display:table;clear:both}
 .onethird,.section{float:center;width:100%}
 
-.w3-col.s1{width:8.33333%}.w3-col.s2{width:16.66666%}.w3-col.s3{width:24.99999%}.w3-col.s4{width:33.33333%}
-.w3-col.s5{width:41.66666%}.w3-col.s6{width:49.99999%}.w3-col.s7{width:58.33333%}.w3-col.s8{width:66.66666%}
-.w3-col.s9{width:74.99999%}.w3-col.s10{width:83.33333%}.w3-col.s11{width:91.66666%}.w3-col.s12{width:99.99999%}
-@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.section{width:24.99999%}.onethird{width:33.33333%}
-.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
-.w3-col.m9,.w3-threequarter{width:74.99999%}.w3-col.m10{width:83.33333%}.w3-col.m11{width:91.66666%}.w3-col.m12{width:99.99999%}}
+@media (min-width:601px){.w3-col.m1{width:8.33333%}
+.section{width:24.99999%}.onethird{width:33.33333%}
 @media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
-.w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
 .w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
 .w3-rest{overflow:hidden}.w3-stretch{margin-left:-16px;margin-right:-16px}
-.style-content,.w3-auto{margin-left:auto;margin-right:auto}.style-content{max-width:980px}.w3-auto{max-width:1140px}
-.w3-cell-row{display:table;width:100%}.w3-cell{display:table-cell}
-.w3-cell-top{vertical-align:top}.w3-cell-middle{vertical-align:middle}.w3-cell-bottom{vertical-align:bottom}
-.w3-hide{display:none!important}.w3-show-block,.w3-show{display:block!important}.w3-show-inline-block{display:inline-block!important}
+.style-content{margin-left:auto;margin-right:auto}.style-content{max-width:980px}
 @media (max-width:1205px){.w3-auto{max-width:95%}}
 @media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}
-.w3-dropdown-hover.w3-mobile .w3-dropdown-content,.w3-dropdown-click.w3-mobile .w3-dropdown-content{position:relative}
-.w3-hide-small{display:none!important}.w3-mobile{display:block;width:100%!important}.bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile{text-align:center}
+.bar-item{text-align:center}
 .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .style-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .style-button{width:100%}}
 @media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
 @media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}.sidebar_navigateur.w3-collapse{display:block!important}}
 @media (max-width:992px) and (min-width:601px){.w3-hide-medium{display:none!important}}
 @media (max-width:992px){.sidebar_navigateur{display:none}.w3-main{margin-left:0!important;margin-right:0!important}}
-.pagetop,.w3-bottom{position:fixed;width:100%;z-index:1}.pagetop{top:0}.w3-bottom{bottom:0}
+.pagetop{position:fixed;width:100%;z-index:1;top:0}
 
-.w3-overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
-.w3-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
-.w3-display-bottomleft{position:absolute;left:0;bottom:0}.w3-display-bottomright{position:absolute;right:0;bottom:0}
-.w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
-.w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
-.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
-.w3-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
-.w3-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
-.w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
 
+.additional-margin-top {margin-top:120px}
 .spacing-between-row,.onethird,.section{padding:0 8px}
 .section_container{padding:0.01em 16px}
 .card_navigateur{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
@@ -150,12 +125,12 @@ div {
 .style-grey{color:#000!important;background-color:#9e9e9e!important}
 .style-dark-grey{color:#fff!important;background-color:#616161!important}
 
-.swipe-space {
+.swipe-space{
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
-.swipe-element {display: block; width: 100%; height:auto;}
+.swipe-element,.swipe-element1,.swipe-element2,.swipe-element3 {display: block; width: 100%; height:auto;}
 
 .prev, .next {
   cursor: pointer;
@@ -174,7 +149,7 @@ div {
 .prev {left: 0; border-radius: 3px 0 0 3px;}
 .prev:hover, .next:hover {background-color: rgba(0,0,0,0.8);}
 
-.dot {
+.dot,.dot1,.dot2,.dot3 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -184,7 +159,8 @@ div {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+
+.active, .dot:hover , .dot1:hover, .dot2:hover,.dot3:hover{
   background-color: #717171;
 }
 .fade {
