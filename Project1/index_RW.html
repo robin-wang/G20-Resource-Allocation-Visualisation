@@ -30,7 +30,7 @@
         chart.draw(data, options);
       }
     </script>
-	
+
     <!-- Script to read in Google spreadsheet data -->
     <script type="text/javascript">
       //loading google chart
@@ -42,111 +42,113 @@
 		//Graphing Section A
         collectGoogleInfo_CompareYear('Real_Spending_PPP',
 				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V',
-				instructionsSpendingHealthGDP);	
-		collectGoogleInfo_CompareYear('Real_Spending_PPP',
-				'SELECT A, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
-				instructionsSpendingEduAllTable);
-		collectGoogleInfo_CompareYear('Real_Spending_PPP',
-				'SELECT A, X,Y,Z,AA,AB,AC,AD,AE,AF,AG, M,N,O,P,Q,R,S,T,U,V',
-				instructionsSpendingEduGDP);
-		collectGoogleInfo_CompareYear('Real_Spending_PPP',
-				'SELECT A, AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS, M,N,O,P,Q,R,S,T,U,V',
-				instructionsSpendingMilitaryGDP);
-		collectGoogleInfo_CompareYear('Real_Spending_PPP',
-				'SELECT A, B,C,D,E,F,G,H,I,J,K, X,Y,Z,AA,AB,AC,AD,AE,AF,AG , AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS',
-				instructionsSpendingThreeCategories);
-		//Graph Section B
-		collectGoogleInfo_CompareYear('Real_Spending_PerCapita',
-				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
-				instructionsPerCapitaFourCategories);					
-		collectGoogleInfo_CompareYear('Real_Spending_PerCapita',
-				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS',
-				instructionsPerCapitaWithoutGDP);					
-		//Graph Section C
-		collectGoogleInfo_CompareYear('Share_GDP',
-				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
-				instructionsShareGDP);					
-		collectGoogleInfo_CompareYear('Share_GovSpending',
-				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
-				instructionsShareGov);					
-		//Graph Section D
-		collectGoogleInfo_CompareYear('Growth_value',
-				'SELECT A, M,N,O,P,Q,R,S,T,U, W,X,Y,Z,AA,AB,AC,AD,AE',
-				instructionsGrowthValue);				
-		collectGoogleInfo_CompareYear('Growth_share',
-				'SELECT A, L,M,N,O,P,Q,R,S,T, V,W,X,Y,Z,AA,AB,AC,AD',
-				instructionsGrowthShare);
-		collectGoogleInfo_CompareYear('Growth_Edu',
-				'SELECT A, B, D',
-				instructionsAverageGrowthEdu);
-				
-		
-	  }
-	  
+				instructionsSpendingHealthGDP);
+    		collectGoogleInfo_CompareYear('Real_Spending_PPP',
+    				'SELECT A, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
+    				instructionsSpendingEduAllTable);
+    		collectGoogleInfo_CompareYear('Real_Spending_PPP',
+    				'SELECT A, X,Y,Z,AA,AB,AC,AD,AE,AF,AG, M,N,O,P,Q,R,S,T,U,V',
+    				instructionsSpendingEduGDP);
+    		collectGoogleInfo_CompareYear('Real_Spending_PPP',
+    				'SELECT A, AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS, M,N,O,P,Q,R,S,T,U,V',
+    				instructionsSpendingMilitaryGDP);
+    		collectGoogleInfo_CompareYear('Real_Spending_PPP',
+    				'SELECT A, B,C,D,E,F,G,H,I,J,K, X,Y,Z,AA,AB,AC,AD,AE,AF,AG , AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS',
+    				instructionsSpendingThreeCategories);
+    		//Graph Section B
+    		collectGoogleInfo_CompareYear('Real_Spending_PerCapita',
+    				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
+    				instructionsPerCapitaFourCategories);
+    		collectGoogleInfo_CompareYear('Real_Spending_PerCapita',
+    				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS',
+    				instructionsPerCapitaWithoutGDP);
+    		//Graph Section C
+    		collectGoogleInfo_CompareYear('Share_GDP',
+    				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
+    				instructionsShareGDP);
+    		collectGoogleInfo_CompareYear('Share_GovSpending',
+    				'SELECT A, B,C,D,E,F,G,H,I,J,K, M,N,O,P,Q,R,S,T,U,V, X,Y,Z,AA,AB,AC,AD,AE,AF,AG',
+    				instructionsShareGov);
+    		//Graph Section D
+    		collectGoogleInfo_CompareYear('Growth_value',
+    				'SELECT A, M,N,O,P,Q,R,S,T,U, W,X,Y,Z,AA,AB,AC,AD,AE',
+    				instructionsGrowthValue);
+    		collectGoogleInfo_CompareYear('Growth_share',
+    				'SELECT A, L,M,N,O,P,Q,R,S,T, V,W,X,Y,Z,AA,AB,AC,AD',
+    				instructionsGrowthShare);
+    		collectGoogleInfo_CompareYear('Growth_Edu',
+    				'SELECT A, B, D',
+    				instructionsAverageGrowthEdu);
+        //Graph Section E
+        collectGoogleInfo_CompareYear('Data_Saudi',
+      			'SELECT A, B, D',
+      			instructionsSaudi);
+	    }
+
 	  //collectGoogleInfo
 	  function collectGoogleInfo_CompareYear(sheetName, select_instructions, drawInstructions) {
         var encoded_instructions = encodeURIComponent(select_instructions);
         var data = new google.visualization.Query(
           'https://docs.google.com/spreadsheets/d/1Fg-cM-ds0JxpdtboHKv0OENG_ZxTKcY-9HbnZzKhmco/gviz/tq?sheet=' + sheetName + '&headers=1&tq=' + encoded_instructions);
-        data.send(drawInstructions);		
+        data.send(drawInstructions);
       }
-	  
+
 	  //Instructions
 			//Graphing Section A
-      function instructionsSpendingHealthGDP(response) {		
-		var responsedata = response.getDataTable();
-		responsedata.sort({column:0,desc:false});
-		var ready_data = [];
-		var options=[];
-		
-		for (var i = 1; i <= 10; i++) {
-			var p = i + 10;
-			var item = i - 1;
-			var year = 2006 + i;
-			var view = new google.visualization.DataView(responsedata);
-			view.setColumns([0,i,p]);
-			var temp_data = view.toDataTable();
-			temp_data.setColumnLabel(1,"Health Exp");
-			temp_data.setColumnLabel(2,"GDP");
-			
-			ready_data[item] = temp_data;
-			options[item] = {
-				height:650,
-				title: "Spending Comparison in "+ year.toString(),
-				legend: {position:'in'},
-				vAxis:{title:''},
-				hAxis:{title:'SPENDING IN $MILLIONS',slantedTextAngle:90},
-				orientation:'vertical',
-				animation:{duration:1000,easing:'out'},
-				width:800,
-				colors: ['#1696d2','#fdbf11']
-			};
-		} 
-		
-		var chart = new google.visualization.ScatterChart(document.getElementById('div_health_GDP'));
-		var button = document.getElementById('button_health_GDP');
-		
-		google.visualization.events.addListener(
-			chart,'ready',
-			function() {
-				button.disabled = false;
-				button.value = "PROCEED TO NEXT";
-			}
-		);
-		
-		var current = 0;
-		chart.draw(ready_data[current], options[current]);
-		button.onclick=function() {
-			if (current < 9) {
-				current = current + 1;
-			} else {
-				current = 0;
-			}
-			chart.draw(ready_data[current], options[current]);
-		}
-      } //instructionsSpendingHealthGDP 
-	  
-      function instructionsSpendingEduAllTable(response) {		
+    function instructionsSpendingHealthGDP(response) {
+  		var responsedata = response.getDataTable();
+  		responsedata.sort({column:0,desc:false});
+  		var ready_data = [];
+  		var options=[];
+
+  		for (var i = 1; i <= 10; i++) {
+  			var p = i + 10;
+  			var item = i - 1;
+  			var year = 2006 + i;
+  			var view = new google.visualization.DataView(responsedata);
+  			view.setColumns([0,i,p]);
+  			var temp_data = view.toDataTable();
+  			temp_data.setColumnLabel(1,"Health Exp");
+  			temp_data.setColumnLabel(2,"GDP");
+
+  			ready_data[item] = temp_data;
+    			options[item] = {
+    				height:650,
+    				title: "Spending Comparison in "+ year.toString(),
+    				legend: {position:'in'},
+    				vAxis:{title:''},
+    				hAxis:{title:'SPENDING IN $MILLIONS',slantedTextAngle:90},
+    				orientation:'vertical',
+    				animation:{duration:1000,easing:'out'},
+    				width:800,
+    				colors: ['#1696d2','#fdbf11']
+    			};
+		  }
+
+		  var chart = new google.visualization.ScatterChart(document.getElementById('div_health_GDP'));
+		  var button = document.getElementById('button_health_GDP');
+
+  		google.visualization.events.addListener(
+  			chart,'ready',
+  			function() {
+  				button.disabled = false;
+  				button.value = "PROCEED TO NEXT";
+  			}
+  		);
+
+  		var current = 0;
+  		chart.draw(ready_data[current], options[current]);
+  		button.onclick=function() {
+  			if (current < 9) {
+  				current = current + 1;
+  			} else {
+  				current = 0;
+  			}
+  			chart.draw(ready_data[current], options[current]);
+  		}
+    } //instructionsSpendingHealthGDP
+
+      function instructionsSpendingEduAllTable(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		responsedata.removeRows(0,2);
@@ -157,24 +159,24 @@
 		for (var c = 1;c<=10;c++) {
 			formatter.format(responsedata, c);
 		}
-		
+
 		table.draw(responsedata, options);
       }
- 
-      function instructionsSpendingEduGDP(response) {		
+
+      function instructionsSpendingEduGDP(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		responsedata.removeRows(0,2);
 		responsedata.removeRow(16);
-		responsedata.removeRow(13);	
-		responsedata.removeRow(12);	
-		responsedata.removeRow(10);	
-		responsedata.removeRow(7);	
-		responsedata.removeRows(3,2);	
-				
+		responsedata.removeRow(13);
+		responsedata.removeRow(12);
+		responsedata.removeRow(10);
+		responsedata.removeRow(7);
+		responsedata.removeRows(3,2);
+
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 10; i++) {
 			var p = i + 10;
 			var item = i - 1;
@@ -184,7 +186,7 @@
 			var temp_data = view.toDataTable();
 			temp_data.setColumnLabel(1,"Education Exp");
 			temp_data.setColumnLabel(2,"GDP");
-			
+
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:650,
@@ -197,11 +199,11 @@
 				animation:{duration:1000,easing:'out'},
 				colors: ['#1696d2','#fdbf11']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.ScatterChart(document.getElementById('div_edu_GDP'));
 		var button = document.getElementById('button_edu_GDP');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -209,7 +211,7 @@
 				button.value = "PROCEED TO NEXT";
 			}
 		);
-		
+
 		var current = 0;
 		chart.draw(ready_data[current], options[current]);
 		button.onclick=function() {
@@ -221,13 +223,13 @@
 			chart.draw(ready_data[current], options[current]);
 		}
       } //instructionsSpendingEduGDP
-	  
-      function instructionsSpendingMilitaryGDP(response) {		
+
+      function instructionsSpendingMilitaryGDP(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 10; i++) {
 			var p = i + 10;
 			var item = i - 1;
@@ -237,7 +239,7 @@
 			var temp_data = view.toDataTable();
 			temp_data.setColumnLabel(1,"Military Exp");
 			temp_data.setColumnLabel(2,"GDP");
-			
+
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:600,
@@ -246,13 +248,14 @@
 				vAxis:{title:''},
 				hAxis:{title:'SPENDING IN $MILLIONS',slantedTextAngle:90},
 				orientation:'vertical',
-				animation:{duration:1000,easing:'out'}			
+				animation:{duration:1000,easing:'out'},
+        colors: ['#1696d2','#fdbf11']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.ScatterChart(document.getElementById('div_military_GDP'));
 		var button = document.getElementById('button_military_GDP');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -260,7 +263,7 @@
 				button.value = "PROCEED TO NEXT";
 			}
 		);
-		
+
 		var current = 0;
 		chart.draw(ready_data[current], options[current]);
 		button.onclick=function() {
@@ -272,13 +275,13 @@
 			chart.draw(ready_data[current], options[current]);
 		}
       } //instructionsSpendingMilitaryGDP
-	  
-      function instructionsSpendingThreeCategories(response) {		
+
+      function instructionsSpendingThreeCategories(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 10; i++) {
 			var j = i + 10;
 			var k = j + 10;
@@ -290,7 +293,7 @@
 			temp_data.setColumnLabel(1,"Health");
 			temp_data.setColumnLabel(2,"Education");
 			temp_data.setColumnLabel(3,"Military");
-			
+
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:600,
@@ -299,13 +302,14 @@
 				vAxis:{title:''},
 				hAxis:{title:'SPENDING IN $MILLIONS',slantedTextAngle:90},
 				orientation:'vertical',
-				animation:{duration:1000,easing:'out'}			
+				animation:{duration:1000,easing:'out'},
+        colors: ['#1696d2','#fdbf11','#000000']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.ScatterChart(document.getElementById('div_three_expenditures'));
 		var button = document.getElementById('button_three_expenditures');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -313,7 +317,7 @@
 				button.value = "PROCEED TO NEXT";
 			}
 		);
-		
+
 		var current = 0;
 		chart.draw(ready_data[current], options[current]);
 		button.onclick=function() {
@@ -326,14 +330,14 @@
 		}
 
       } //instructionsSpendingThreeCategories
-		  
+
 			//Graphing Section B
-	  function instructionsPerCapitaFourCategories(response) {		
+	  function instructionsPerCapitaFourCategories(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 10; i++) {
 			var j = i + 10;
 			var k = j + 10;
@@ -347,7 +351,7 @@
 			temp_data.setColumnLabel(2,"Education Exp Per Capita");
 			temp_data.setColumnLabel(3,"Military Exp Per Capita");
 			temp_data.setColumnLabel(4,"GDP Per Capita");
-			
+
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:600,
@@ -357,13 +361,14 @@
 				hAxis:{title:'SPENDING IN $MILLIONS',slantedTextAngle:90},
 				orientation:'vertical',
 				animation:{duration:1000,easing:'out'},
-				isStacked:true
+				isStacked:true,
+        colors: ['#000000','#d2d2d2','#1696d2','#fdbf11']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.BarChart(document.getElementById('div_percapita_four_categories'));
 		var button = document.getElementById('button_percapita_four_categories');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -382,13 +387,13 @@
 			chart.draw(ready_data[current], options[current]);
 		}
       } //instructionsPerCapitaFourCategories
-	  
-	  function instructionsPerCapitaWithoutGDP(response) {		
+
+	  function instructionsPerCapitaWithoutGDP(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 10; i++) {
 			var j = i + 10;
 			var k = j + 10;
@@ -400,7 +405,7 @@
 			temp_data.setColumnLabel(1,"Health");
 			temp_data.setColumnLabel(2,"Education");
 			temp_data.setColumnLabel(3,"Military");
-			
+
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:600,
@@ -410,9 +415,10 @@
 				hAxis:{title:'SPENDING IN $MILLIONS',showTextEvery:1},
 				orientation:'vertical',
 				animation:{duration:1000,easing:'out'},
-				isStacked:true
+				isStacked:true,
+        colors: ['#1696d2','#fdbf11','#000000']
 			};
-		} 
+		}
 		var chart = new google.visualization.ScatterChart(document.getElementById('div_percapita_withoutGDP'));
 		var button = document.getElementById('button_percapita_withoutGDP');
 		google.visualization.events.addListener(
@@ -432,15 +438,15 @@
 			}
 			chart.draw(ready_data[current], options[current]);
 		}
-      } //instructionsPerCapitaWithoutGDP	  
+      } //instructionsPerCapitaWithoutGDP
 
 			//Graphing Section C
-	  function instructionsShareGDP(response) {		
+	  function instructionsShareGDP(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 10; i++) {
 			var j = i + 10;
 			var k = j + 10;
@@ -452,7 +458,7 @@
 			temp_data.setColumnLabel(1,"Health Exp");
 			temp_data.setColumnLabel(2,"Education Exp");
 			temp_data.setColumnLabel(3,"Military Exp");
-			
+
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:600,
@@ -462,13 +468,14 @@
 				hAxis:{title:'Spending as share of GDP (%)',slantedTextAngle:90},
 				orientation:'vertical',
 				animation:{duration:1000,easing:'out'},
-				isStacked:true
+				isStacked:true,
+        colors: ['#1696d2','#fdbf11','#000000']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.BarChart(document.getElementById('div_share_gdp'));
 		var button = document.getElementById('button_share_gdp');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -488,12 +495,12 @@
 		}
       } //instructionsShareGDP
 
-	  function instructionsShareGov(response) {		
+	  function instructionsShareGov(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 10; i++) {
 			var j = i + 10;
 			var k = j + 10;
@@ -505,7 +512,7 @@
 			temp_data.setColumnLabel(1,"Health Exp");
 			temp_data.setColumnLabel(2,"Education Exp");
 			temp_data.setColumnLabel(3,"Military Exp");
-			
+
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:600,
@@ -515,13 +522,14 @@
 				hAxis:{title:'Spending as share of Total Government Spending (%)',slantedTextAngle:90},
 				orientation:'vertical',
 				animation:{duration:1000,easing:'out'},
-				isStacked:true
+				isStacked:true,
+        colors: ['#1696d2','#fdbf11','#000000']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.BarChart(document.getElementById('div_share_gov'));
 		var button = document.getElementById('button_share_gov');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -540,9 +548,9 @@
 			chart.draw(ready_data[current], options[current]);
 		}
       } //instructionsShareGov
-	  
+
 			//Graphing Section D
-      function instructionsAverageGrowthEdu(response) {		
+      function instructionsAverageGrowthEdu(response) {
 		var responsedata = response.getDataTable();
 		var ready_data = [];
 		var options=[];
@@ -555,7 +563,7 @@
 			temp_data.setColumnLabel(1,"Edu Exp Change");
 			temp_data.sort({column:1,desc:true})
 			ready_data[item] = temp_data;
-		} 
+		}
 		options[0] = {
 			height:600,
 			title: "G20 Education Expenditure Average Change in 2007-2016 in $Million PPP",
@@ -564,6 +572,7 @@
 			hAxis:{title:'',slantedTextAngle:90},
 			orientation:'horizontal',
 			animation:{duration:1000,easing:'out'},
+      colors: ['#1696d2']
 		};
 		options[1] = {
 			height:600,
@@ -573,11 +582,12 @@
 			hAxis:{title:'',slantedTextAngle:90},
 			orientation:'horizontal',
 			animation:{duration:1000,easing:'out'},
-		};		
+      colors: ['#1696d2']
+		};
 
-		var chart = new google.visualization.BarChart(document.getElementById('div_growth_edu'));		
+		var chart = new google.visualization.BarChart(document.getElementById('div_growth_edu'));
 		var button = document.getElementById('button_growth_edu');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -593,12 +603,12 @@
 		}
 	  } //instructionsAverageGrowthEdu
 
-	  function instructionsGrowthValue(response) {		
+	  function instructionsGrowthValue(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 9; i++) {
 			var j = i + 9;
 			var item = i - 1;
@@ -619,12 +629,13 @@
 				hAxis:{title:'$Million, in PPP or Current Year (Military)',slantedTextAngle:90},
 				orientation:'vertical',
 				animation:{duration:1000,easing:'out'},
+        colors: ['#1696d2','#fdbf11']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.ColumnChart(document.getElementById('div_growth_value'));
 		var button = document.getElementById('button_growth_value');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -642,14 +653,14 @@
 			}
 			chart.draw(ready_data[current], options[current]);
 		}
-      } //instructionsGrowthValue
+    } //instructionsGrowthValue
 
-	  function instructionsGrowthShare(response) {		
+	  function instructionsGrowthShare(response) {
 		var responsedata = response.getDataTable();
 		responsedata.sort({column:0,desc:false});
 		var ready_data = [];
 		var options=[];
-		
+
 		for (var i = 1; i <= 9; i++) {
 			var j = i + 9;
 			var item = i - 1;
@@ -660,7 +671,7 @@
 			var temp_data = view.toDataTable();
 			temp_data.setColumnLabel(1,"Health");
 			temp_data.setColumnLabel(2,"Military");
-			temp_data.sort({column:1,desc:true})			
+			temp_data.sort({column:1,desc:true})
 			ready_data[item] = temp_data;
 			options[item] = {
 				height:600,
@@ -670,12 +681,13 @@
 				hAxis:{title:'%',slantedTextAngle:90},
 				orientation:'vertical',
 				animation:{duration:1000,easing:'out'},
+        colors: ['#1696d2','#fdbf11']
 			};
-		} 
-		
+		}
+
 		var chart = new google.visualization.ColumnChart(document.getElementById('div_growth_share'));
 		var button = document.getElementById('button_growth_share');
-		
+
 		google.visualization.events.addListener(
 			chart,'ready',
 			function() {
@@ -693,9 +705,36 @@
 			}
 			chart.draw(ready_data[current], options[current]);
 		}
-      } //instructionsGrowthShare	  
-    
-	
+      } //instructionsGrowthShare
+
+    function instructionsSaudi(response) {
+  		var responsedata = response.getDataTable();
+  		responsedata.sort({column:0,desc:false});
+      responsedata.insertColumn(2,{type:'boolean',role:'certainty'});
+      responsedata.addColumn({type:'boolean',role:'certainty'});
+      for (var r=0; r<=9; r++) {
+          if (r<8) {
+            responsedata.setCell(r,2,true);
+            responsedata.setCell(r,4,true);
+          } else {
+            responsedata.setCell(r,2,false);
+            responsedata.setCell(r,4,false);
+          }
+      }
+  		var options  = {
+  				height:600,
+  				title: "Spotlight on Saudi Arabia",
+  				legend: {position:'right'},
+  				vAxis:{title:'$Millon',gridlines: {color: 'transparent'}},
+  				hAxis:{title:'',format: '0000',gridlines: {color: 'transparent'}},
+  				orientation:'horizontal',
+          annotations:{style:'line'},
+  				animation:{duration:1000,easing:'out'},
+          colors: ['#1696d2','#fdbf11']
+  		};
+  		var chart = new google.visualization.LineChart(document.getElementById('div_Saudi'));
+  		chart.draw(responsedata, options);
+    } //instructionsSaudi
 	</script>
 
 
@@ -715,7 +754,6 @@
       <a href="#Per Capita" onclick="close_onclick()" class="bar-item style-button">Per Capita Spending</a>
       <a href="#Resource Allocation" onclick="close_onclick()" class="bar-item style-button">Resource Allocation</a>
       <a href="#Growth" onclick="close_onclick()" class="bar-item style-button">Growth</a>
-	  
       <a href="#Spotlight" onclick="close_onclick()" class="bar-item style-button">Spotlight</a>
       <a href="#About the Project" onclick="close_onclick()" class="bar-item style-button">About the Project</a>
     </nav>
@@ -738,277 +776,311 @@
   <!-- PAGE CONTENT -->
     <div class="style-margin style-content style-padding-relative" style="max-width:1200px;margin-top:100px">
 
-      <!-- 1. Visualising G20-->
-      <div class="spacing-between-row style-padding-small align-center" id="G20">
-		<hr><h2 class="style-padding-large additional-margin-top">Visualising G20</h2>
-		<p>Explore G20 Countries (population in 2017)<br>
-		   Throughout this visualisation demo, EU is excluded as visualising the Union<br>
-		   without UK, France, Germany and Italy would largely defeat the purpose of this entity.<br>
-		   <br>
-		   For each section of visualisation, please hover over space left and right of chart <br>
-		   to navigate to the next group of charts in that topic. The buttons are used to create<br>
-		   transition from 2007 to 2016.<br>
-       	</p>
-		<div id="div_G20map"></div>
-	  </div>
-	  
-	  
-      <!-- 2. Gov Expenditures against GDP-->
-	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Real Spending">
+        <!-- 1. Visualising G20-->
+      <div class="spacing-between-row style-padding-small align-center" id="G20" align="middle">
+  		  <hr><h2 class="style-padding-large additional-margin-top">Visualising G20</h2>
+  		  <p>Explore G20 Countries (population in 2017)<br>
+  		   Throughout this visualisation demo, EU is excluded as visualising the Union<br>
+  		   without UK, France, Germany and Italy would largely defeat the purpose of this entity.<br>
+    		  <br>
+    		   For each section of visualisation, please hover over space left and right of chart <br>
+    		   to navigate to the next group of charts in that topic. The buttons are used to create<br>
+    		   transition from 2007 to 2016.
+          <br>
+        </p>
+  		  <div id="div_G20map"></div>
+  	  </div>
+      <br>
+
+        <!-- 2. Gov Expenditures against GDP-->
+  	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Real Spending">
         <div class="style-padding align-center">
-		  <hr>
+    		  <hr>
           <h2 class="additional-margin-top">Government Expenditure against GDP in G20 Countries ($Millions) in 2007-2016</h2>
         </div>
 
         <div class="swipe-element fade">
           <h3>Health Expenditure and GDP (Constant PPP)</h3>
           <div id="div_health_GDP" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_health_GDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-          <p>Unless otherwise noted, data are based on purchasing power parity.<br>
-			This is done to ensure within-country spending comparison reflect relative price,<br>
-			and apple to apple comparison would make sense between countries. This may <br>
-			render GDP comparisons look counter-intuitive.
-		  </p>
+  		    <button type="button" id="button_health_GDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+            <p>Unless otherwise noted, data are based on purchasing power parity.<br>
+    			This is done to ensure within-country spending comparison reflect relative price,<br>
+    			and apple to apple comparison would make sense between countries. This may <br>
+    			render GDP comparisons look counter-intuitive.
+    		  </p>
         </div>
-		
+
         <div class="swipe-element fade">
           <h3 style="margin-bottom:30px">G20 Government Education Expenditure (Constant PPP)<br></h3>
-          <div id="div_edu_all" style="width:90%" align="middle"></div>  
+          <div id="div_edu_all" style="width:90%" align="middle"></div>
           <p>
-			Let nothingness affirm existence - Strikingly, education expenditure <br>
-			has not been well documented even for G20 countries.<br><br>
-			In the following comparison with GDP, we only take countries that have <br>
-			relatively complete government record for educational expenditure. The list includes<br>
-			ARG,AUS,BRA,FRA,GER,INS,ITA,MEX,ZAF,ROK,GBR,USA<br>
-			All education expenditure figures come from UNESCO Institute For Statistics (http://data.uis.unesco.org)
-		  </p>
-        </div>		
-		
+    			Let nothingness affirm existence - Strikingly, education expenditure <br>
+    			has not been well documented even for G20 countries.<br><br>
+    			In the following comparison with GDP, we only take countries that have <br>
+    			relatively complete government record for educational expenditure. The list includes<br>
+    			ARG,AUS,BRA,FRA,GER,INS,ITA,MEX,ZAF,ROK,GBR,USA<br>
+    			All education expenditure figures come from UNESCO Institute For Statistics (http://data.uis.unesco.org)
+    		  </p>
+        </div>
+
         <div class="swipe-element fade">
           <h3>Select G20 Education Expenditure Re-examined 2007-2016(Constant PPP)</h3>
           <div id="div_edu_GDP" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_edu_GDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>Frankly, GDP figures dwarf education spending...</p>
+    		  <button type="button" id="button_edu_GDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>Frankly, GDP figures dwarf education spending...</p>
         </div>
-		
+
         <div class="swipe-element fade">
           <h3>Military Spending and GDP for G20 Countries 2007-2016</h3>
           <div id="div_military_GDP" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_military_GDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+  		    <button type="button" id="button_military_GDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
           <p>Note PPP is hard to quantify purchasing power when it comes to <br>
-			military spending. Here all military expenditure records were aggregated <br>
-			by the Swedish research institute SIPRI, in $Million at current prices <br>
-			and exchange rates.<br><br>
-			We will then use proportional measures to examine these expenditures later.
-		  </p>
+    			military spending. Here all military expenditure records were aggregated <br>
+    			by the Swedish research institute SIPRI, in $Million at current prices <br>
+    			and exchange rates.<br><br>
+    			We will then use proportional measures to examine these expenditures later.
+    		  </p>
         </div>
 
         <div class="swipe-element fade">
           <h3>Three Categories of Expenditures among G20 Countries 2007-2016</h3>
           <div id="div_three_expenditures" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_three_expenditures" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>	
-			It is not hard to see health expenditures in some countries far exceeded<br>
-			military expenditure. But does it really explain differences between countries?<br>
-			This is best answered with shares of spending and per capita spending data, <br>
-			which we shall turn to next.
-		  </p>
+    		  <button type="button" id="button_three_expenditures" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>
+    			It is not hard to see health expenditures in some countries far exceeded<br>
+    			military expenditure. But does it really explain differences between countries?<br>
+    			This is best answered with shares of spending and per capita spending data, <br>
+    			which we shall turn to next.
+    		  </p>
         </div>
 
         <a class="prev leftfloat hover-black" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next rightfloat hover-black" onclick="plusSlides(1)">&#10095;</a>
 
-		<div style="text-align:center">
-		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(1)"></span>
-		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(2)"></span>
-		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(3)"></span>
-		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(4)"></span>
-		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(5)"></span>
-		</div>
-	  </div>
+    		<div style="text-align:center">
+    		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(1)"></span>
+    		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(2)"></span>
+    		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(3)"></span>
+    		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(4)"></span>
+    		  <span class="dot style-w3badge style-addborder" onclick="currentSlide(5)"></span>
+    		</div>
+  	  </div>
       <br>
-	
-      <!-- 3. Per Capita Expenditures-->
-	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Per Capita">
+
+        <!-- 3. Per Capita Expenditures-->
+  	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Per Capita">
         <div class="style-padding align-center">
-		  <hr>
+  		    <hr>
           <h2 class="additional-margin-top">
-		  Government Expenditure against GDP <br>
-		  on Per Capita Basis in 2007-2016
-		  </h2>
+    		  Government Expenditure against GDP <br>
+    		  on Per Capita Basis in 2007-2016
+    		  </h2>
         </div>
-		
-		<div class="swipe-element1 fade">
+
+  		  <div class="swipe-element1 fade">
           <h3>Per Capita Expenditures and GDP (Constant PPP) 2007-2016</h3>
           <div id="div_percapita_four_categories" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_percapita_four_categories" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>On per capita basis, the differences between countries are not so drastic.<br>
-			Still hard to see with per capita GDP...
-		  </p>
+    		  <button type="button" id="button_percapita_four_categories" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>On per capita basis, the differences between countries are not so drastic.<br>
+    			Still hard to see with per capita GDP...
+    		  </p>
         </div>
 
         <div class="swipe-element1 fade">
           <h3>Removing Per Capita GDP</h3>
           <div id="div_percapita_withoutGDP" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_percapita_withoutGDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>
-			Absolute levels of spending per person may not convey the focus of a nation.<br>
-			Which Brings Us To...			
-		  </p>
+    		  <button type="button" id="button_percapita_withoutGDP" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>
+    			Absolute levels of spending per person may not convey the focus of a nation.<br>
+    			Which Brings Us To...
+    		  </p>
         </div>
-		
+
         <a class="prev leftfloat hover-black" onclick="plusSlides1(-1)">&#10094;</a>
         <a class="next rightfloat hover-black" onclick="plusSlides1(1)">&#10095;</a>
 
-		<div style="text-align:center">
-		  <span class="dot1 style-w3badge style-addborder" onclick="currentSlide1(1)"></span>
-		  <span class="dot1 style-w3badge style-addborder" onclick="currentSlide1(2)"></span>
-		</div>
-	  </div>
+    		<div style="text-align:center">
+    		  <span class="dot1 style-w3badge style-addborder" onclick="currentSlide1(1)"></span>
+    		  <span class="dot1 style-w3badge style-addborder" onclick="currentSlide1(2)"></span>
+    		</div>
+  	  </div>
       <br>
 
-	  <!-- 4. Resource Allocation -->
-	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Resource Allocation">
+  	  <!-- 4. Resource Allocation -->
+  	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Resource Allocation">
         <div class="style-padding align-center">
-		  <hr>
+  		  <hr>
           <h2 class="additional-margin-top"> G20 Government Expenditures in Context 2007-2016</h2>
         </div>
-		
-		<div class="swipe-element2 fade">
+
+  		  <div class="swipe-element2 fade">
           <h3> Expenditures as Share of GDP 2007-2016</h3>
           <div id="div_share_gdp" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_share_gdp" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>
-			In addition to the relative share of expenditures for each country against its GDP,<br>
-			this also shows the size of government in a given country.<br>
-			<br>
-			Note share of health expenditure in US, and share of military expenditure in Saudi Arabia!
-		  </p>
+  		    <button type="button" id="button_share_gdp" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>
+    			In addition to the relative share of expenditures for each country against its GDP,<br>
+    			this also shows the size of government in a given country.<br>
+    			<br>
+    			Note share of health expenditure in US, and share of military expenditure in Saudi Arabia!
+    		  </p>
         </div>
 
         <div class="swipe-element2 fade">
           <h3> Expenditures as Share of Total Government Spending 2007-2016</h3>
           <div id="div_share_gov" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_share_gov" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>
-			Even more dramatically so...
-		  </p>
+  		    <button type="button" id="button_share_gov" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>
+    			Even more dramatically so...
+    		  </p>
         </div>
         <a class="prev leftfloat hover-black" onclick="plusSlides2(-1)">&#10094;</a>
         <a class="next rightfloat hover-black" onclick="plusSlides2(1)">&#10095;</a>
 
-		<div style="text-align:center">
-		  <span class="dot2 style-w3badge style-addborder" onclick="currentSlide2(1)"></span>
-		  <span class="dot2 style-w3badge style-addborder" onclick="currentSlide2(2)"></span>
-		</div>
-	  </div>
+  		  <div style="text-align:center">
+  		    <span class="dot2 style-w3badge style-addborder" onclick="currentSlide2(1)"></span>
+  		    <span class="dot2 style-w3badge style-addborder" onclick="currentSlide2(2)"></span>
+  		  </div>
+  	  </div>
       <br>
-	  
-	  <!-- 5. Growth -->
-	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Growth">
-        <div class="style-padding align-center">
-		  <hr>
-          <h2 class="additional-margin-top"> Growth in Government Expenditure in 2007-2016</h2>
-        </div>
-		
-        <div class="swipe-element3 fade">
-          <h3> Average Growth Education 2007-2016</h3>
-          <div id="div_growth_edu" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_growth_edu" class="style-hoverover style-button colour-button">Proceed to Next Education Comparison</button>
-		  <p>
-			Average education expenditure growth is calculated for all G20 countries<br>
-			apart from China and Saudi Arabia, for lack of information. At the same time,<br>
-			I took the oldest and the latest year for each country to inform change calculation<br>
-			and this means some may have average values calculated based on incomplete information<br>
-			from select years in 2007-2016.
-		  </p>
-        </div>		
-		
-		<div class="swipe-element3 fade">
+
+  	  <!-- 5. Growth -->
+  	  <div class="spacing-between-row style-padding-small align-center swipe-space" id="Growth">
+          <div class="style-padding align-center">
+  		  <hr>
+            <h2 class="additional-margin-top"> Growth in Government Expenditure in 2007-2016</h2>
+          </div>
+
+          <div class="swipe-element3 fade">
+            <h3> Average Growth Education 2007-2016</h3>
+            <div id="div_growth_edu" style="width:90%" align="middle"></div>
+  		  <button type="button" id="button_growth_edu" class="style-hoverover style-button colour-button">Proceed to Next Education Comparison</button>
+  		  <p>
+  			Average education expenditure growth is calculated for all G20 countries<br>
+  			apart from China and Saudi Arabia, for lack of information. At the same time,<br>
+  			I took the oldest and the latest year for each country to inform change calculation<br>
+  			and this means some may have average values calculated based on incomplete information<br>
+  			from select years in 2007-2016.
+  		  </p>
+          </div>
+
+  		  <div class="swipe-element3 fade">
           <h3> Expenditure Changes 2007-2016</h3>
           <div id="div_growth_value" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_growth_value" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>
-			We keep military expenditures and health spending in this set of visualisations <br>
-			as the sparcity of education spending data makes calculation of year-to-year changes untenable.<br>
-			<br>
-			In this set of visualisations, we rank countries dynamically across time based on health spending increase.
-		  </p>
+  		    <button type="button" id="button_growth_value" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>
+    			We keep military expenditures and health spending in this set of visualisations <br>
+    			as the sparcity of education spending data makes calculation of year-to-year changes untenable.<br>
+    			<br>
+    			In this set of visualisations, we rank countries dynamically across time based on health spending increase.
+    		  </p>
         </div>
 
         <div class="swipe-element3 fade">
           <h3> Percentage Change 2007-2016</h3>
           <div id="div_growth_share" style="width:90%" align="middle"></div>
-		  <button type="button" id="button_growth_share" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
-		  <p>
-			Even more dramatically so...
-		  </p>
+  		    <button type="button" id="button_growth_share" class="style-hoverover style-button colour-button">Proceed to Next Year</button>
+    		  <p>
+    			Even more dramatically so...
+    		  </p>
         </div>
-		
-
 
         <a class="prev leftfloat hover-black" onclick="plusSlides3(-1)">&#10094;</a>
         <a class="next rightfloat hover-black" onclick="plusSlides3(1)">&#10095;</a>
 
-		<div style="text-align:center">
-		  <span class="dot3 style-w3badge style-addborder" onclick="currentSlide3(1)"></span>
-		  <span class="dot3 style-w3badge style-addborder" onclick="currentSlide3(2)"></span>
-		  <span class="dot3 style-w3badge style-addborder" onclick="currentSlide3(3)"></span>
-		</div>
-	  </div>
+  		  <div style="text-align:center">
+  		    <span class="dot3 style-w3badge style-addborder" onclick="currentSlide3(1)"></span>
+  		    <span class="dot3 style-w3badge style-addborder" onclick="currentSlide3(2)"></span>
+  		    <span class="dot3 style-w3badge style-addborder" onclick="currentSlide3(3)"></span>
+  		  </div>
+  	  </div>
       <br>
-	  	  
-	 
-      <!-- About Section -->
-      <div class="section_container style-padding-large align-center">
-        <h3>About the Project - Credit and Source</h3><br>
-        <img src="/images/chef.jpg" alt="Me" class="image_format" style="display:block;margin:auto" width="800" height="533">
-        <div class="style-padding-large">
-          <h4><b>I am Who I Am!</b></h4>
-          <h6><i>With Passion For Real, Good Food</i></h6>
-          <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        </div>
-      </div>
-      <hr>
 
-      <!-- Footer -->
-      <footer class="spacing-between-row style-padding-large">
-        <div class="onethird">
-          <h3>FOOTER</h3>
-          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-        </div>
-
-        <div class="onethird">
-          <h3>BLOG POSTS</h3>
-          <ul class="style-ul style-hoverover">
-            <li class="style-padding">
-              <img src="/images/workshop.jpg" class="leftfloat style-rightmargin" style="width:50px">
-              <span class="font-large">Lorem</span><br>
-              <span>Sed mattis nunc</span>
-            </li>
-            <li class="style-padding">
-              <img src="/images/gondol.jpg" class="leftfloat style-rightmargin" style="width:50px">
-              <span class="font-large">Ipsum</span><br>
-              <span>Praes tinci sed</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="onethird font-serif">
-          <h3>POPULAR TAGS</h3>
+      <!-- 6. Spotlight -->
+    	<div class="spacing-between-row style-padding-small align-center swipe-space" id="Spotlight">
+        <div class="style-padding align-center">
+    		  <hr>
+          <h2 class="additional-margin-top"> Spotlight on Saudi Arabia</h2>
           <p>
-            <span class="style-tags style-margin-bottom">Travel</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">New York</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Dinner</span>
-            <span class="style-tags style-dark-grey font-small style-margin-bottom">Salmon</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">France</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Drinks</span>
-            <span class="style-tags style-dark-grey font-small style-margin-bottom">Ideas</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Flavors</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Cuisine</span>
-            <span class="style-tags style-dark-grey font-small style-margin-bottom">Chicken</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Dressing</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Fried</span>
-            <span class="style-tags style-dark-grey font-small style-margin-bottom">Fish</span> <span class="style-tags style-dark-grey font-small style-margin-bottom">Duck</span>
+            In mid-2014, the international oil price was above $120 per barrel for a time, <br>
+            following a historic hike from $40 in 2008 recession. <br><br>
+            In early 2016, the price dipped below $30.<br>
+            Proceed to this <a href="http://blogs.worldbank.org/developmenttalk/what-triggered-oil-price-plunge-2014-2016-and-why-it-failed-deliver-economic-impetus-eight-charts">World Bank Blog</a>
+            for details and analyses.
           </p>
+          <div id="div_Saudi" style="width:90%" align="middle"></div>
+
         </div>
-      </footer>
+    	</div>
+      <br>
+
+        <!-- About Section -->
+        <div class="section_container style-padding-large align-center" id="About the Project">
+          <hr><h3 class="additional-margin-top">About the Project - Credit and Source</h3><br>
+
+          <div class="style-padding">
+
+            <h6><i>Referenced with gratitude.</i></h6>
+            <p align="left">
+              This data visualisation project has benefited immensely
+              from Dr. Zahadat's web development introduction.<br>
+              Besides, HTML, CSS and JAVASCRIPT codes all had referenced and adapted elements from
+              W3 Schools, StackOverflow, Google Visualisation Documentation and other online sources.
+              They were referenced never with the intention to avoid giving them credits or obviating
+              my own learning process; instead, I wish to clearly acknowledge that my practical modifications
+              could not have delivered some levels of satisfaction without these outside inputs.
+            </p>
+            <br>
+            <h6>
+              <i>Data Source</i>
+              <p align="left">
+                Health statistics come from World Health Organization's <i><a href="http://apps.who.int/nha/">Global Health Expenditure Database.</a></i><br>
+                GDP statistics retrieved from <i><a href="https://databank.worldbank.org/data/">World Development Indicators</a></i> of the World Bank Group.
+                Share of education expenditures are extracted from this source as well.<br>
+                Education spending statistics extracted from UNESCO <i><a href="http://data.uis.unesco.org">Institute For Statistics</a></i>.
+                No data from credible source on education expenditure per capita exists; yet using education expenditure per student distorts the measurement.
+                Statistics used in this project are calculated based on implied population from health spending and total education expenditures.<br>
+                Military expenditure were in USD at current prices and exchange rates, extracted from the Swedish conflict and military thinktank
+                <i><a href="https://www.sipri.org/">Stockholm International Peace Research Institute (SIPRI)</a></i>.
+                China, Russia, Italy and Saudi Arabia had some or all years of data based on SIPRI estimates.<br>
+                Population statistics for G20 countries are for 2017 in millions, retrieved from <i><a href="https://www.statista.com/statistics/722968/g20-population-size/">Statistica</a></i>.
+              </p>
+            </h6>
+            <br>
+            <h6>
+              <i>Possible Improvements</i><br>
+            </h6>
+            <p align="left">
+              Google Visualisation API is peculiar with graph rendering when multiple graphs were layered
+              onto each other in a controlled slider; this can be addressed with more complex automation of
+              the animated effects; possible improvements also include dashboard for user selected data.
+            </p>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Footer -->
+        <footer class="spacing-between-row">
+          <div class="hovercontainer">
+            <img src="images/wang-robin-long.jpg" alt="Me" class="image_format style-content image"
+                 style="display:inline;margin:auto;padding:10;padding-right:20px" width="160"
+                 height="100" align="left" id="myphoto">
+            <div class="overlay" align="middle">
+              <br><br>
+              DO NOT <br>
+              HOVER OVER<br>
+              FACE PLEASE...
+            </div>
+          </div>
+            <h4><b><a href="https://www.robinwang.net/">Robin Wang</a></b></h4>
+            <i><p>Health Policy Research Analyst, Urban Institute</p></i>
+            <p><a href="https://www.urban.org/author/robin-wang">Explore more data and policy works from author.</a></p>
+            <a href = "mailto:rw.robinwang@gmail.com?subject = Feedback&body = Message">
+              Contact the author...
+            </a>
+        </footer>
     </div>
 	<!-- End page content -->
-	
+
     <script type="text/javascript">
       var slideIndex = 1;
       showSlides(slideIndex);
@@ -1034,7 +1106,7 @@
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += "active";
-      }	  
+      }
 	</script>
 	<script type="text/javascript">
 	  var slideIndex1 = 1;
@@ -1060,17 +1132,17 @@
         slides1[slideIndex1-1].style.display = "block";
         dots1[slideIndex1-1].className += "active";
       }
-	  	  
+
 	</script>
 	<script type="text/javascript">
 	  var slideIndex2 = 1;
-      showSlides2(slideIndex2);	  
+      showSlides2(slideIndex2);
       function plusSlides2(n2) {
-        showSlides2(slideIndex2 += n2);		
+        showSlides2(slideIndex2 += n2);
       }
       function currentSlide2(n2) {
         showSlides2(slideIndex2 = n2);
-      }	  
+      }
       function showSlides2(n2) {
         var i2;
         var slides2 = document.getElementsByClassName("swipe-element2");
@@ -1085,18 +1157,18 @@
         }
         slides2[slideIndex2-1].style.display = "block";
         dots2[slideIndex2-1].className += "active";
-      }	  
+      }
 	</script>
-	  
+
 	<script type="text/javascript">
 	  var slideIndex3 = 1;
-      showSlides3(slideIndex3);	  
+      showSlides3(slideIndex3);
       function plusSlides3(n3) {
-        showSlides3(slideIndex3 += n3);		
+        showSlides3(slideIndex3 += n3);
       }
       function currentSlide3(n3) {
         showSlides3(slideIndex3 = n3);
-      }	  
+      }
       function showSlides3(n3) {
         var i3;
         var slides3 = document.getElementsByClassName("swipe-element3");
@@ -1111,20 +1183,19 @@
         }
         slides3[slideIndex3-1].style.display = "block";
         dots3[slideIndex3-1].className += "active";
-      }	  
-	</script>	  
+      }
+	</script>
 
     <script>
     // Script to open and close sidebar
-    function open_onclick() {
-      document.getElementById("Sidebar_Navigateur").style.display = "block";
-    }
+      function open_onclick() {
+        document.getElementById("Sidebar_Navigateur").style.display = "block";
+      }
 
-    function close_onclick() {
-      document.getElementById("Sidebar_Navigateur").style.display = "none";
-    }
+      function close_onclick() {
+        document.getElementById("Sidebar_Navigateur").style.display = "none";
+      }
     </script>
-
   </body>
 
 </html>

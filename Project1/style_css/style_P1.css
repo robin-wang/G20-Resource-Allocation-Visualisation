@@ -7,7 +7,6 @@ https://www.w3schools.com/w3css/4/w3.css
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
-
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,font-small,summary{display:block}
 audio,canvas,progress,video{display:inline-block}
 progress{vertical-align:baseline}
@@ -35,7 +34,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 /* End extract */
 html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.font-serif{font-family:serif}
-h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
+h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
 hr{
   height:2px;
   background: grey;
@@ -46,7 +45,7 @@ div {
   float: center;
 }
 
-.image_format{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+.image_format{height:auto}a{color:inherit}
 .font-title{font-size:24px;font-weight:bold;text-transform:uppercase;}
 
 .style-hoverover tbody tr:hover,.style-ul.style-hoverover li:hover{background-color:#ccc}
@@ -59,46 +58,46 @@ div {
 .style-w3badge{border-radius:50%}
 .style-ul{list-style-type:none;padding:0;margin:0}.style-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.style-ul li:last-child{border-bottom:none}
 
-.w3-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
-.w3-dropdown-click,.w3-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
-.w3-dropdown-hover:hover .w3-dropdown-content{display:block}
-.w3-dropdown-hover:first-child,.w3-dropdown-click:hover{background-color:#ccc;color:#000}
-.w3-dropdown-hover:hover > .style-button:first-child,.w3-dropdown-click:hover > .style-button:first-child{background-color:#ccc;color:#000}
-.w3-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
-.w3-check,.w3-radio{width:24px;height:24px;position:relative;top:6px}
 .sidebar_navigateur{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
-.bar-block_navigateur .w3-dropdown-hover,.bar-block_navigateur .w3-dropdown-click{width:100%}
-.bar-block_navigateur .w3-dropdown-hover .w3-dropdown-content,.bar-block_navigateur .w3-dropdown-click .w3-dropdown-content{min-width:100%}
-.bar-block_navigateur .w3-dropdown-hover .style-button,.bar-block_navigateur .w3-dropdown-click .style-button{width:100%;text-align:left;padding:8px 16px}
+.bar-block_navigateur .bar-block_navigateur {width:100%}
+.bar-block_navigateur .bar-block_navigateur {min-width:100%}
+.bar-block_navigateur .style-button,.bar-block_navigateur .style-button{width:100%;text-align:left;padding:8px 16px}
 .style-margin,#main{transition:margin-left .4s}
 
 .bar_section{width:100%;overflow:hidden}.align-center .bar_section{display:inline-block;width:auto}
 .bar_section .bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
-.bar_section .w3-dropdown-hover,.bar_section .w3-dropdown-click{position:static;float:left}
 .bar_section .style-button{white-space:normal}
 .bar-block_navigateur .bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
-.bar-block_navigateur.align-center .bar-item{text-align:center}.w3-block{display:block;width:100%}
-.w3-responsive{display:block;overflow-x:auto}
-.section_container:after,.section_container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.spacing-between-row:after,.spacing-between-row:before,
-.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.bar_section:before,.bar_section:after{content:"";display:table;clear:both}
+.bar-block_navigateur.align-center .bar-item{text-align:center}
+.bar_section:before,.bar_section:after{content:"";display:table;clear:both}
 .onethird,.section{float:center;width:100%}
-
-@media (min-width:601px){.w3-col.m1{width:8.33333%}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.hovercontainer {
+  position: relative;
+  width: 140px;
+  height:auto;
+}
+.image {
+  display: block;
+  height: auto;
+}
+.hovercontainer:hover .overlay {
+  opacity: 1;
+}
 .section{width:24.99999%}.onethird{width:33.33333%}
-@media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
-.w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
-.w3-rest{overflow:hidden}.w3-stretch{margin-left:-16px;margin-right:-16px}
 .style-content{margin-left:auto;margin-right:auto}.style-content{max-width:980px}
-@media (max-width:1205px){.w3-auto{max-width:95%}}
-@media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}
 .bar-item{text-align:center}
-.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .style-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .style-button{width:100%}}
-@media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
-@media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}.sidebar_navigateur.w3-collapse{display:block!important}}
-@media (max-width:992px) and (min-width:601px){.w3-hide-medium{display:none!important}}
-@media (max-width:992px){.sidebar_navigateur{display:none}.w3-main{margin-left:0!important;margin-right:0!important}}
+@media (max-width:992px){.sidebar_navigateur{display:none}}
 .pagetop{position:fixed;width:100%;z-index:1;top:0}
-
 
 .additional-margin-top {margin-top:120px}
 .spacing-between-row,.onethird,.section{padding:0 8px}
@@ -168,12 +167,4 @@ div {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
 }
